@@ -97,8 +97,8 @@ input, select {
 
 @layer utilities {
   .text-gradient {
-    background: linear-gradient(135deg, #fff 0%, #9ca3af 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   

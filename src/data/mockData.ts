@@ -1,4 +1,4 @@
-import { Video } from '../types';
+import type { Video } from '../types';
 
 export const MOCK_VIDEOS: Video[] = [
   {

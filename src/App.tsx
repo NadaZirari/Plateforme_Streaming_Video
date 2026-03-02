@@ -1,5 +1,7 @@
+```
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import type { Video } from './types';
 import { AuthProvider } from './context/AuthContext';
 import Navbar from './components/layout/Navbar';
 import ProtectedRoute from './components/auth/ProtectedRoute';
@@ -9,7 +11,7 @@ const Home = lazy(() => import('./pages/Home.tsx'));
 const VideoDetails = lazy(() => import('./pages/VideoDetails.tsx'));
 const Watchlist = lazy(() => import('./pages/Watchlist.tsx'));
 const Profile = lazy(() => import('./pages/Profile.tsx'));
-const AuthPage = lazy(() => import('./pages/auth/AuthPage'));
+const AuthPage = lazy(() => import('./pages/auth/AuthPage.tsx'));
 
 const App: React.FC = () => {
   return (

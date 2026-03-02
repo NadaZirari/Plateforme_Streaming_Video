@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Play, Plus, Star, Info, Check } from 'lucide-react';
-import { Video } from '../../types';
+import { Play, Plus, Star, Check } from 'lucide-react';
+import type { Video } from '../../types';
 import { cn } from '../../lib/utils';
 import { motion } from 'framer-motion';
 import { useLocalStorage } from '../../hooks/useLocalStorage';
-import { useAuth } from '../../hooks/useAuth';
 
 interface VideoCardProps {
   video: Video;
@@ -13,7 +12,6 @@ interface VideoCardProps {
 }
 
 const VideoCard: React.FC<VideoCardProps> = ({ video, priority = false }) => {
-  const { user } = useAuth();
   const [watchlist, setWatchlist] = useLocalStorage<string[]>('user_watchlist', []);
   
   const isInWatchlist = watchlist.includes(video.id);

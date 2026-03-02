@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
-import { useParams, useSearchParams } from 'react-router-dom';
-import { Search, SlidersHorizontal, Play, Info, ChevronDown } from 'lucide-react';
+import { useParams } from 'react-router-dom';
+import { Search, SlidersHorizontal, Play, Info } from 'lucide-react';
 import { MOCK_VIDEOS, CATEGORIES } from '../data/mockData';
 import VideoCard from '../components/ui/VideoCard';
 import { cn } from '../lib/utils';
@@ -8,7 +8,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const Home: React.FC = () => {
   const { type } = useParams<{ type: string }>();
-  const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('Tous');
   const [sortBy, setSortBy] = useState('recent'); // recent, rated, popular

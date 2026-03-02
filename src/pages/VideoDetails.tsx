@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Play, Plus, Check, Star, Clock, Calendar, Users, ArrowLeft, ThumbsUp, Share2 } from 'lucide-react';
 import { MOCK_VIDEOS } from '../data/mockData';
-import { Video } from '../types';
+import type { Video } from '../types';
 import VideoCard from '../components/ui/VideoCard';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 import { cn } from '../lib/utils';

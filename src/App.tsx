@@ -5,10 +5,10 @@ import Navbar from './components/layout/Navbar';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 
 // Lazy loading pages
-const Home = lazy(() => import('./pages/Home'));
-const VideoDetails = lazy(() => import('./pages/VideoDetails'));
-const Watchlist = lazy(() => import('./pages/Watchlist'));
-const Profile = lazy(() => import('./pages/Profile'));
+const Home = lazy(() => import('./pages/Home.tsx'));
+const VideoDetails = lazy(() => import('./pages/VideoDetails.tsx'));
+const Watchlist = lazy(() => import('./pages/Watchlist.tsx'));
+const Profile = lazy(() => import('./pages/Profile.tsx'));
 const AuthPage = lazy(() => import('./pages/auth/AuthPage'));
 
 const App: React.FC = () => {
